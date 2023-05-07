@@ -7,7 +7,7 @@ body{
 }
 .title{
     height: 100px;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     padding-top:50px;
     color: #1cc7d3; 
@@ -19,18 +19,18 @@ body{
 }
 .side-abilities{
     flex: 1;
-    background-color: green;
+    background-color: #2d283c;
     display: flex;
     flex-direction: column;
 }
 .character-pic{
-    flex: 2;
+    flex: 1;
     display: flex;
     justify-content: center;
 }
 .main-abilities{
     flex: 1;
-    background-color: green;
+    background-color: #2d283c;
     display: flex;
     flex-direction: column;
 }
@@ -40,23 +40,40 @@ body{
 .ability{
     flex: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition-property: background-color;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-    transition-delay: 500ms;
-}
-.ability:hover{
-    background-color: blueviolet;
-    cursor: pointer;
+    justify-content: center;
     flex-direction: row;
+    border-width: 1px;
+    border-color: #000000;
+    position: relative;
 }
 .ability-img{
-    flex: 1;
+    z-index: 1;
+    position: relative;
+    left: 0;
+    top: 20px;
+    height: 140px;
+    z-index: 100;
+}
+.ability-title{
+    z-index: 10;
+    height: 32px;
+    color: white; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    position: absolute;
+    text-align: center;  
+    top: 200px;
 }
 .ability-description{
-    flex: 2;
+    z-index: 10;
+    position: absolute;
+    color: white; 
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    top: 40px;
+    width: 360px;
+    left: 240px;
+    opacity: 0;
 }
 /* .q-ability{
     flex: 1;

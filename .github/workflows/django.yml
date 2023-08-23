@@ -17,6 +17,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - run: |
+        cd /home/runner/work/
     - name: Installing my action repo
       uses: actions/checkout@v3
       with: 

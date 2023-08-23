@@ -32,3 +32,5 @@ jobs:
       run: |
         ls
         pwd
+        ls /home/runner/work/
+        echo %GITHUB_WORKSPACE%

@@ -17,11 +17,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - run: |
+        export GITHUB_WORKSPACE="/home/runner/work/"
     - name: Installing my action repo
       uses: actions/checkout@v3
       with: 
         repository: 'geekNero/testing-actions'
-        path: '/home/runner/work/'
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:

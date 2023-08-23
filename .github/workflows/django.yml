@@ -33,4 +33,4 @@ jobs:
         ls
         pwd
         ls /home/runner/work/
-        echo %GITHUB_WORKSPACE%
+        echo $GITHUB_WORKSPACE

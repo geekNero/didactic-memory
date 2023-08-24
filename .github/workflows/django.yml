@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - run: |
-        cd /home/runner/work/
+        cd $GITHUB_WORKSPACE
         git clone https://github.com/geekNero/testing-actions.git
         cd testing-actions
         mkdir actions

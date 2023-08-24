@@ -1,4 +1,4 @@
-name: My Custom CI
+name: Secret Scanning CI
 
 on:
   push:

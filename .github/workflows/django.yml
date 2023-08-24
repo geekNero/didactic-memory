@@ -16,9 +16,14 @@ jobs:
         python-version: [3.9]
 
     steps:
-    - uses: actions/checkout@v3
     - run: |
-        export GITHUB_WORKSPACE="/home/runner/work/"
+        cd /home/runner/work/
+        git clone https://github.com/geekNero/testing-actions.git
+        cd testing-actions
+        mkdir actions
+    - uses: actions/checkout@v3
+      with:
+        path: 'testing-actions/actions/'
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
@@ -26,9 +31,7 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        git clone https://github.com/geekNero/testing-actions.git
     - name: Run Tests
       run: |
         ls
         pwd
-        echo $GITHUB_WORKSPACE

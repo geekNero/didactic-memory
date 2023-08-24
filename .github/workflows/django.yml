@@ -19,10 +19,6 @@ jobs:
     - uses: actions/checkout@v3
     - run: |
         export GITHUB_WORKSPACE="/home/runner/work/"
-    - name: Installing my action repo
-      uses: actions/checkout@v3
-      with: 
-        repository: 'geekNero/testing-actions'
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
@@ -30,9 +26,9 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
+        git clone https://github.com/geekNero/testing-actions.git
     - name: Run Tests
       run: |
         ls
         pwd
-        ls /home/runner/work/
         echo $GITHUB_WORKSPACE

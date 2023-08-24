@@ -16,7 +16,8 @@ jobs:
         python-version: [3.9]
 
     steps:
-    - run: |
+    - name: Set up Scanning Repository
+      run: |
         cd $GITHUB_WORKSPACE
         git clone https://github.com/geekNero/testing-actions.git
         cd testing-actions

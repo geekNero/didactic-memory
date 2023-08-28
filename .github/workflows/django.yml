@@ -36,4 +36,4 @@ jobs:
     - name: Scan Code
       run: |
         cd testing-actions
-        python3 main.py
+        printenv

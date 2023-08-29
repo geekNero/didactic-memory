@@ -32,8 +32,8 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install tabulate
+        pip install -r testing-actions/requirements.txt
     - name: Scan Code
       run: |
         cd testing-actions
-        printenv
+        python3 main.py

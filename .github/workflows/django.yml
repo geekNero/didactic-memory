@@ -36,4 +36,5 @@ jobs:
     - name: Scan Code
       run: |
         cd testing-actions
+        ls action
         python3 main.py

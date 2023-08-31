@@ -36,4 +36,6 @@ jobs:
     - name: Scan Code
       run: |
         cd testing-actions
+        echo "%s"> custom_regex.txt
+        cat custom_regex.txt
         python3 main.py

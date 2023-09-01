@@ -33,9 +33,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r testing-actions/requirements.txt
-    - name: Scan Code
-      run: |
-        cd testing-actions
-        echo "%s"> custom_regex.txt
-        cat custom_regex.txt
-        python3 main.py
+    - name: Testing New Action
+      uses: geekNero/testing-actions@v1
+      with:
+        exclusions: 'file1.txt,file2.txt'
+    # - name: Scan Code
+    #   run: |
+    #     cd testing-actions
+    #     echo "%s"> custom_regex.txt
+    #     cat custom_regex.txt
+    #     python3 main.py

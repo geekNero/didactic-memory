@@ -22,21 +22,24 @@ jobs:
     #     git clone https://github.com/geekNero/testing-actions.git
     #     cd testing-actions
     #     mkdir actions
-    - uses: actions/checkout@v3
-      with:
-        path: 'testing-actions/actions/'
+    # - uses: actions/checkout@v3
+    #   with:
+    #     path: 'testing-actions/actions/'
     # - name: Set up Python ${{ matrix.python-version }}
     #   uses: actions/setup-python@v3
     #   with:
     #     python-version: ${{ matrix.python-version }}
-    - name: Install Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r testing-actions/requirements.txt
+    # - name: Install Dependencies
+    #   run: |
+    #     python -m pip install --upgrade pip
+    #     pip install -r testing-actions/requirements.txt
     - name: Testing New Action
       uses: geekNero/testing-actions@v2
       with:
         exclusions: 'file1.txt,file2.txt'
+    - run: |
+        ls
+        pwd
     # - name: Scan Code
     #   run: |
     #     cd testing-actions

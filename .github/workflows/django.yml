@@ -34,7 +34,7 @@ jobs:
     #     python -m pip install --upgrade pip
     #     pip install -r testing-actions/requirements.txt
     - name: Testing New Action
-      uses: geekNero/testing-actions@v5
+      uses: geekNero/testing-actions@v1
       with:
         exclusions: 'file1.txt,file2.txt'
     - run: |

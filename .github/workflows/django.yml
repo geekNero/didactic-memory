@@ -38,8 +38,8 @@ jobs:
       with:
         exclusions: 'file1.txt,file2.txt'
     - run: |
+        cd /home/runner/work/
         ls
-        pwd
     # - name: Scan Code
     #   run: |
     #     cd testing-actions

@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Secret Scanning
-      uses: geekNero/testing-actions@v2
+      uses: geekNero/secret-scanning@v1
       with:
         file-exclusions: '"file1.txt,file2.txt"'
+    - name: Vulnerability Scanning
+      uses: geekNero/vulnerability-scanning@development

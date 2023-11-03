@@ -15,5 +15,3 @@ jobs:
       uses: geekNero/secret-scanning@v1
       with:
         file-exclusions: '"file1.txt,file2.txt"'
-    - name: Vulnerability Scanning
-      uses: geekNero/vulnerability-scanning@development

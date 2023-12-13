@@ -1,0 +1,15 @@
+name: SBOM
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Generating SBOM
+      uses: geekNero/solid-chainsaw@v1

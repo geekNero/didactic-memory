@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: alpine-latest
     steps:
     - name: Generating SBOM
       uses: geekNero/solid-chainsaw@v1

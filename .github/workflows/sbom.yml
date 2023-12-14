@@ -9,12 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: arch
     steps:
-    - uses: jirutka/setup-alpine@v1
-      with:
-        branch: v3.15
-    - run: cat /etc/alpine-release
-      shell: alpine.sh {0}
     - name: Generating SBOM
       uses: geekNero/solid-chainsaw@v1

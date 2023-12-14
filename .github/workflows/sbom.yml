@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Generating SBOM
-      uses: geekNero/solid-chainsaw@v1
+      uses: geekNero/solid-chainsaw@v2
